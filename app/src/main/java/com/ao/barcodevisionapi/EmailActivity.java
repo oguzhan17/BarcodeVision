@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class EmailActivity extends AppCompatActivity implements View.OnClickListener {
+public class EmailActivity extends AppCompatActivity {
 
     EditText inSubject, inBody;
     TextView txtEmailAddress;
@@ -50,14 +50,4 @@ public class EmailActivity extends AppCompatActivity implements View.OnClickList
         });
     }
 
-    @Override
-    public void onClick(View v) {
-
-        switch (v.getId()) {
-            case R.id.btnScanBarcode:
-                startActivity(new Intent(EmailActivity.this, ScannedBarcodeActivity.class));
-                break;
-        }
-
-    }
 }
